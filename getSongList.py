@@ -17,7 +17,7 @@ def getSongList(html_txt, joint='&'):
     ]
     # 获取歌手
     singer_list = [
-        ' / '.join(re.findall('>(.*?)</a>', str(singerTag)) ) 
+        ' {} '.format(joint).join(re.findall('>(.*?)</a>', str(singerTag)) ) 
         for singerTag in soup.find_all('div', class_='songlist__artist')
     ]
     # 合并
