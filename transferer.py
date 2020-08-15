@@ -33,3 +33,19 @@ def getSongList(html_txt, joint='&'):
     ]
     return song_list
 
+def elementExist_id(ele_id):
+    '''
+    用于判断页面上某个id的元素是否存在/出现
+    '''
+    try:
+        browser.find_element_by_id(ele_id)
+        return True
+    except:
+        return False
+
+def transferer():
+    song_list_url = input('Paste the url of your song list: ')
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
+    }
+    song_list = getSongList(getSongListHtml(song_list_url, headers))
