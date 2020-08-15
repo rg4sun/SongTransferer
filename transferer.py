@@ -115,7 +115,9 @@ def transferer():
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
     }
     song_list = getSongList(getSongListHtml(song_list_url, headers))
-    transfering(song_list)
+    # transfering(song_list) # 这样传进去的是json，但是应该传入一个文本字符串
+    transfering('\n'.join(song_list))
+    
 
 if __name__ == "__main__":
     transferer()
