@@ -114,3 +114,7 @@ def transferer():
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
     }
     song_list = getSongList(getSongListHtml(song_list_url, headers))
+    transfering(song_list)
+
+if __name__ == "__main__":
+    transferer()
