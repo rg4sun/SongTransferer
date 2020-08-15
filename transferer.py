@@ -51,7 +51,8 @@ def transfering(song_list):
     browser.maximize_window()
     browser.find_element_by_id('startButton').click() # 找到并点击开始按钮
     time.sleep(1)
-    browser.find_element_by_xpath('/html/body/div[6]/div[3]/div/div[2]/div[3]/div[17]').click() # 选择文本输入歌曲列表
+    # browser.find_element_by_xpath('/html/body/div[6]/div[3]/div/div[2]/div[3]/div[17]').click() # 选择文本输入歌曲列表
+    browser.find_element_by_xpath('/html/body/div[6]/div[3]/div/div[2]/div[3]/div[19]').click() # 选择文本输入歌曲列表
     time.sleep(1)
     browser.find_element_by_id('songText').send_keys(song_list) # 模拟输入 歌曲 
     time.sleep(3)
